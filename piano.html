@@ -1,0 +1,56 @@
+<div class="piano grid-st-col">
+  	<div class="grid-st-col">
+    	<div class="btn"></div>
+    	<div class="btn"></div>
+    	<div class="btn"></div>
+  	</div>
+  	<div class="grid-st-col">
+    	<div class="btn"></div>
+    	<div class="btn"></div>
+    	<div class="btn"></div>
+      <div class="btn"></div>
+  	</div>
+<style>
+  body {
+    background-color: #998235;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid-st-col {
+    display: grid;
+    gap: 5px;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: end;
+  }
+  
+  .piano {
+    width: 180px;
+    height: 100px;
+    background: #191919;
+    border-radius: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    position: relative;
+    width: 20px;
+    height: 70px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+  }
+ 
+  .btn:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: 1;
+    right: -10px;
+    width: 15px;
+    height: 35px;
+    background-color: #191919;
+  }
+</style>
